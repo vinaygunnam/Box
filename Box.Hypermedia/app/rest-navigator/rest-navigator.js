@@ -13,8 +13,8 @@ var App;
         var directive = {
             restrict: "EA",
             scope: {
-                link: "=",
-                targetState: "@",
+                resource: "=",
+                targetState: "@"
             }
         };
         return directive;

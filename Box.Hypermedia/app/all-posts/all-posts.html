@@ -1,0 +1,16 @@
+﻿<div>
+    <section>
+        <a data-ui-sref="root.newpost({url: apc.newPostLink})" class="btn btn-success">Create a new post</a>
+    </section>
+
+    <hr />
+
+    <table class="table table-condensed table-bordered table-striped">
+        <tr data-ng-repeat="post in apc.posts">
+            <td data-ng-bind="post.title"></td>
+            <td>
+                <a rest-navigator data-resource="post" data-ui-sref="post({url: post.navigationLink.href})">View post</a>
+            </td>
+        </tr>
+    </table>
+</div>

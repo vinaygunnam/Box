@@ -11,8 +11,8 @@ module App {
         var directive: ng.IDirective = {
             restrict: "EA",
             scope: {
-                link: "=",
-                targetState: "@",
+                resource: "=",
+                targetState: "@"
             }
         };
 
