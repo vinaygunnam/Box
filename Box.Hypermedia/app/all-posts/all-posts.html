@@ -1,6 +1,6 @@
 ﻿<div>
     <section>
-        <a data-ui-sref="root.newpost({url: apc.newPostLink})" class="btn btn-success">Create a new post</a>
+        <a data-ui-sref="root.newpost({url: apc.newPostLink})" class="btn btn-success" popover data-toggle="popover" data-trigger="focus hover" data-content="rel='create'">Create a new post</a>
     </section>
 
     <hr />
@@ -9,7 +9,7 @@
         <tr data-ng-repeat="post in apc.posts">
             <td data-ng-bind="post.title"></td>
             <td>
-                <a rest-navigator data-resource="post" data-ui-sref="post({url: post.navigationLink.href})">View post</a>
+                <a rest-navigator data-resource="post" data-ui-sref="post({url: post.navigationLink.href})" popover data-toggle="popover" data-trigger="focus hover" data-content="rel='self'">View post</a>
             </td>
         </tr>
     </table>

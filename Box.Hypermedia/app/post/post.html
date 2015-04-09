@@ -1,0 +1,10 @@
+﻿<div class="well well-lg">
+    <h2 data-ng-bind="pc.post.title"></h2>
+    <hr/>
+    <p data-ng-bind="pc.post.body"></p>
+    <hr/>
+    <span data-ng-bind="pc.post.votes"></span>
+    
+    <span class="pull-right btn btn-danger" data-ng-show="pc.deleteLink" popover data-toggle="popover" data-trigger="focus hover" data-content="rel='delete'" data-placement="bottom">Delete</span>
+    <span class="pull-right btn btn-info" data-ng-show="pc.editLink" popover data-toggle="popover" data-trigger="focus hover" data-content="rel='update'" data-placement="top">Edit</span>
+</div>

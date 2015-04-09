@@ -4,6 +4,7 @@
 /// <reference path="post/post.ts" />
 angular.module("app", ["ui.router"])
     .constant("ApiEndPoint", "http://private-daf6f-hypermediablog.apiary-mock.com")
+    .directive("popover", App.popover)
     .controller("HomeController", App.HomeController)
     .directive("home", App.home)
     .controller("AllPostsController", App.AllPostsController)
@@ -13,7 +14,8 @@ angular.module("app", ["ui.router"])
     .config([
         "$stateProvider", "$urlRouterProvider",
         ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
-            
+            $urlRouterProvider.otherwise("/");
+
             $stateProvider
                 .state("root", {
                     url: "/",
